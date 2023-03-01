@@ -19,3 +19,9 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+// war 풀기
+task explodedWar(type: Copy) {
+    into "$buildDir/exploded"
+    with war
+}
